@@ -35,9 +35,8 @@ def migrate_classroom_to_canvas(canvas_file, classroom_file) -> int:
     import_data.insert(1, canvas[1])
 
     # save import_data to canvas_import.csv
-    with open(
-        "canvas_import.csv", "w", newline="", encoding="utf-8"
-    ) as canvas_import_file:
+    with open("canvas_import.csv", "w", newline="",
+              encoding="utf-8") as canvas_import_file:
         writer = csv.writer(canvas_import_file)
         writer.writerows(import_data)
 
