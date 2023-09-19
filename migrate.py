@@ -4,8 +4,8 @@ import csv
 def migrate_classroom_to_canvas(canvas_file, classroom_file) -> int:
     """
 
-    :param canvas_file: 
-    :param classroom_file: 
+    :param canvas_file:
+    :param classroom_file:
 
     """
     # open canvas.csv and read the data, store its data in variable canvas
