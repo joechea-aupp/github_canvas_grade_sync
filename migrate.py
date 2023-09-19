@@ -4,11 +4,11 @@ import csv
 def migrate_classroom_to_canvas(canvas_file, classroom_file) -> int:
     # open canvas.csv and read the data, store its data in variable canvas
     # open classroom.csv and read the data, store its data in variable classroom
-    with open(canvas_file, 'r', encoding='utf-8') as file:
+    with open(canvas_file, "r", encoding="utf-8") as file:
         canvas = csv.reader(file)
         canvas = list(canvas)
 
-    with open(classroom_file, 'r', encoding='utf-8') as file:
+    with open(classroom_file, "r", encoding="utf-8") as file:
         classroom = csv.reader(file)
         classroom = list(classroom)
 
@@ -29,7 +29,9 @@ def migrate_classroom_to_canvas(canvas_file, classroom_file) -> int:
     import_data.insert(1, canvas[1])
 
     # save import_data to canvas_import.csv
-    with open('canvas_import.csv', 'w', newline='', encoding='utf-8') as canvas_import_file:
+    with open(
+        "canvas_import.csv", "w", newline="", encoding="utf-8"
+    ) as canvas_import_file:
         writer = csv.writer(canvas_import_file)
         writer.writerows(import_data)
 
