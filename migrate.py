@@ -4,12 +4,12 @@ import csv
 def migrate_classroom_to_canvas(canvas_file, classroom_file) -> int:
     # open canvas.csv and read the data, store its data in variable canvas
     # open classroom.csv and read the data, store its data in variable classroom
-    with open('canvas.csv', 'r', encoding='utf-8') as canvas_file:
-        canvas = csv.reader(canvas_file)
+    with open(canvas_file, 'r', encoding='utf-8') as file:
+        canvas = csv.reader(file)
         canvas = list(canvas)
 
-    with open('classroom.csv', 'r', encoding='utf-8') as classroom_file:
-        classroom = csv.reader(classroom_file)
+    with open(classroom_file, 'r', encoding='utf-8') as file:
+        classroom = csv.reader(file)
         classroom = list(classroom)
 
     # empty list to store the data that will be imported to canvas
